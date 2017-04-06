@@ -1,0 +1,30 @@
+/* --- Navbar --- */
+a{
+    outline-style: none;
+}
+
+.navbar-btn{
+    margin-right: 5px;
+}
+
+.navbar li{
+    text-align: center;
+}
+
+.navbar{
+    border-radius: 0;
+}
+
+/* Modals */
+.modal label{
+    width: 200px;
+    text-align: right;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-header{
+    background-image: url('../img/grain_cafe.jpg');
+    font-size: 25px;
+    color: white;
+}
