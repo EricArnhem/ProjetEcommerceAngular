@@ -1,0 +1,52 @@
+body{
+    background-color: #DCDCDC;
+}
+.grains{
+    margin-left: 32.5%;
+    margin-top: 8%;
+    border-radius: 50%;
+}
+.dolce, .nespresso, .senseo, .tassimo, .dosette_dolce, .dosette_nespresso, .dosette_senseo, .dosette_tassimo{
+    border-radius: 50%;
+}
+.dolce{
+    margin-left: 28.5%;
+    margin-top: -65%;
+}
+.nespresso{
+    margin-left: 23%;
+    margin-top: -51%;
+}
+.senseo{
+    margin-left: 22.5%;
+    margin-top: -34.5%;
+}
+.tassimo{
+    margin-left: 27%;
+    margin-top: -18%;
+}
+.dosette_dolce{
+    margin-left: 60%;
+    margin-top: -78%;
+}
+.dosette_nespresso{
+    margin-left: 65.8%;
+    margin-top: -64%;
+}
+.dosette_senseo{
+    margin-left: 66.5%;
+    margin-top: -47%;
+}
+.dosette_tassimo{
+    margin-left: 62.5%;
+    margin-top: -31.5%;
+}
+footer{
+    padding-top: 15px; 
+    height: 50px;
+    background-color: #A9A9A9;
+}
+.noms{
+    margin-top: 10px;
+   margin-left: 42%;
+}
