@@ -43,10 +43,14 @@ body{
 }
 footer{
     padding-top: 15px; 
-    height: 50px;
+    height: 100px;
     background-color: #A9A9A9;
 }
-.noms{
-    margin-top: 10px;
-   margin-left: 42%;
+.footer{
+    padding-top: 20px
+}
+@media screen and (max-width: 1200px) {
+    .images{
+        background-image: url('assets/img/grain_cafe.jpg');
+    }
 }
