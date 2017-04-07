@@ -16,6 +16,16 @@ a{
 }
 
 /* Modals */
+.close{
+    color: white;
+    opacity: 0.8;
+}
+
+.close:hover{
+    color: white;
+    opacity: 0.5;
+}
+
 .inputs_inscription_modal label, buttons_connexion_modal label{
     width: 200px;
     text-align: right;
@@ -24,7 +34,7 @@ a{
 }
 
 .modal-header{
-    background-image: url('../img/grain_cafe.jpg');
+    background-image: url('../img/grain_cafe_big.jpg');
     font-size: 25px;
     color: white;
 }
