@@ -75,26 +75,7 @@ footer{
   margin-top: 0;
   margin-left: 22.5%;
 }
-/***************************
----------Média fond---------
-***************************/
-@media screen and (max-width: 748px) {
-    body{
-      background-image: url('../img/grain_cafe_big.jpg');
-      background-size: auto;
-      background-repeat: no-repeat;
-      height: inherit;
+
+button{
+
 }
-@media(max-width: 1200px){
-    .images{
-        background-image: url(../img/grain_cafe_big.jpg);
-        background-size: cover;
-    }
-}
-@media screen and (max-width: 990px) {
-    .images{
-        background-image: url(../img/grain_cafe_big.jpg);
-        background-size: cover;
-    }
-}
->>>>>>> c986870f88ada7aeac65e724bed97ca3c48e2cf1

@@ -11,7 +11,7 @@
   <script src="assets/js/angular.min.js" type="text/javascript"></script>
   <script src="assets/js/script.js" type="text/javascript"></script>
 </head>
-<body ng-app="coffeeApp" ng-controller="cartCtrl">
+<body ng-app="coffeeApp" ng-controller="coffeeCtrl">
   <!-- Modal de la connexion -->
   <div class="modal fade" id="connexionModal" role="dialog">
     <div class="modal-dialog">
@@ -73,7 +73,7 @@
           <h2 class="modal-title">Panier</h2>
         </div>
         <!-- Corps du modal avec les items du panier -->
-        <div class="modal-body">
+        <div class="modal-body" ng-controller="cartCtrl">
           <div class="row">
             <div class="col-lg-2 item_pictures">
               <img src="assets/img/nespresso.jpg" alt="Photo capsule nespresso">
@@ -128,46 +128,60 @@
   </div>
   <section>
     <div class="row">
-      <div class="row">
-        <div class="btn-group col-md-offset-4 col-md-1">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Prix <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Croissant</a></li>
-            <li><a href="#">Décroissant</a></li>
-          </ul>
-        </div>
-        <button class="btn btn-default col-md-1" type="submit">Cafetière</button>
-        <div class="btn-group col-md-1">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dosettes/Capsules <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Dossettes</a></li>
-            <li><a href="#">Capsules</a></li>
-          </ul>
-        </div>
+      <div class="btn-group col-md-offset-4 col-md-1">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Prix <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Croissant</a></li>
+          <li><a href="#">Décroissant</a></li>
+        </ul>
       </div>
-    </section>
-    <div class="row">
-      <div class="col-lg-4">
-
+      <button class="btn btn-default col-md-1" type="submit">Cafetière</button>
+      <div class="btn-group col-md-1">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dosettes/Capsules <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Dosettes</a></li>
+          <li><a href="#">Capsules</a></li>
+        </ul>
       </div>
-    <div class="col-lg-4">
-
     </div>
-    <div class="col-lg-4">
-
+  </section>
+  <div class="row">
+    <div class="col-lg-6">
+      <div ng-repeat="coffee in coffees | filter:type='machine'">
+        <fieldset class="article">
+          <h2>{{coffee.nom | filter}}</h2>
+          <img src="assets/img/{{coffee.img}}" alt="">
+          <h2>Marque: {{coffee.marque}}</h2>
+          <p>{{coffee.description}}</p>
+          <p>Prix: {{coffee.prix | currency:"€"}}</p>
+          <button type="button" name="button">Ajoutez au panier</button>
+        </fieldset>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div ng-repeat="coffee in coffees | filter:type='dosette'">
+        <fieldset class="article">
+          <h2>{{coffee.nom}}</h2>
+          <img src="assets/img/{{coffee.img}}" alt="">
+          <h2>Marque: {{coffee.marque}}</h2>
+          <p>{{coffee.description}}</p>
+          <p>Prix: {{coffee.prix | currency:"€"}}</p>
+          <button type="button" name="button">Ajoutez au panier</button>
+        </fieldset>
+      </div>
     </div>
   </div>
-    <footer class="container-fluid">
-      <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
-        <p >Modes de paiement : </p>
-        <img src="assets/img/visa.png" alt=""/>
-        <img src="assets/img/mastercard.png" alt=""/>
-      </div>
-      <p class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-center footer">© 2017 CoffeeShop Corporation. All Rights Reserved.<br><span class="hidden-xs"> Eric A. Christophe G. Clément B. Priscillia L.</span></p>
-    </footer>
-  </body>
-  </html>
+  <footer class="container-fluid">
+    <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
+      <p >Modes de paiement : </p>
+      <img src="assets/img/visa.png" alt=""/>
+      <img src="assets/img/mastercard.png" alt=""/>
+    </div>
+    <p class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-center footer">© 2017 CoffeeShop Corporation. All Rights Reserved.<br><span class="hidden-xs"> Eric A. Christophe G. Clément B. Priscillia L.</span></p>
+  </footer>
+</body>
+</html>
