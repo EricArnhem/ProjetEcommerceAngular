@@ -1,20 +1,19 @@
+/***************************
+--------Images lg md--------
+***************************/
 /* --- Navbar --- */
 a{
     outline-style: none;
 }
-
 .navbar-btn{
     margin-right: 5px;
 }
-
 .navbar li{
     text-align: center;
 }
-
 .navbar{
     border-radius: 0;
 }
-
 /* Modals */
 .close{
     color: white;
@@ -32,92 +31,61 @@ a{
     margin-right: 5px;
     margin-bottom: 10px;
 }
-
 .modal-header{
     background-image: url('../img/grain_cafe_big.jpg');
     font-size: 25px;
     color: white;
 }
-
 /* Modal Panier */
 .item_remove_button{
     margin-top: 40px;
 }
-
 .item_pictures img{
   height: 75px;
 }
-
 .cart_item_title{
   font-weight: bold;
 }
-
 #cart_button{
   margin-top: 20px;
   margin-right: 10px;
   float: right;
 }
-
 .quantity_choice{
   margin-left: 5px;
   margin-right: 5px;
 }
-
+/*bouton_prix*/
+.bouton_prix{
+  z-index: 2000;
+}
 /* Contenu */
 body{
     background-color: #DCDCDC;
 }
-.grains{
-    margin-left: 32.5%;
-    margin-top: 8%;
-    border-radius: 50%;
-}
-.dolce, .nespresso, .senseo, .tassimo, .dosette_dolce, .dosette_nespresso, .dosette_senseo, .dosette_tassimo{
-    border-radius: 50%;
-}
-.dolce{
-    margin-left: 28.5%;
-    margin-top: -65%;
-}
-.nespresso{
-    margin-left: 23%;
-    margin-top: -51%;
-}
-.senseo{
-    margin-left: 22.5%;
-    margin-top: -34.5%;
-}
-.tassimo{
-    margin-left: 27%;
-    margin-top: -18%;
-}
-.dosette_dolce{
-    margin-left: 60%;
-    margin-top: -78%;
-}
-.dosette_nespresso{
-    margin-left: 65.8%;
-    margin-top: -64%;
-}
-.dosette_senseo{
-    margin-left: 66.5%;
-    margin-top: -47%;
-}
-.dosette_tassimo{
-    margin-left: 62.5%;
-    margin-top: -31.5%;
-}
+/***************************
+-----------Footer-----------
+***************************/
 footer{
-    padding-top: 15px; 
-    height: 100px;
-    background-color: #A9A9A9;
+  padding-top: 15px;
+  height: inherit;
+  background-color: #A9A9A9;
+  /*position: fixed;*/
+  bottom: 0;
+  right: 0;
+  width: 100%;
 }
 .footer{
     padding-top: 20px
 }
+/***************************
+------------Fond------------
+***************************/
+.fond{
+  margin-top: 0;
+  margin-left: 22.5%;
+}
 
-@media(max-width: 1200px) {
-    .images{
-        background-image: url('../img/grain_cafe_big.jpg');
-    }
+button{
+
 }

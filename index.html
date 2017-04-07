@@ -36,36 +36,6 @@
             </div>
         </div>
 
-        <!-- Modal de l'inscription -->
-        <div class="modal fade" id="inscriptionModal" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content" id="inscription">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h2 class="modal-title text-center" id="title_inscription_modal">Inscrivez-vous</h2>
-                    </div>
-                    <div class="modal-body text-center">
-                        <div class="inputs_inscription_modal">
-                            <label for="username">Nom d'utilisateur :</label><input type="text" name="username" id="username_input" placeholder="Nom d'utilisateur" maxlength="30" size="20">
-                        </div>
-                        <div class="inputs_inscription_modal">
-                            <label for="email">Adresse e-mail :</label><input type="email" name="email" id="email_input" placeholder="Mot de passe" maxlength="60" size="20">
-                        </div>
-                        <div class="inputs_inscription_modal">
-                            <label for="password">Mot de passe :</label><input type="password" name="password" id="password_input" placeholder="Mot de passe" maxlength="30" size="20">
-                        </div>
-                        <div class="inputs_inscription_modal">
-                            <label for="password_confirm">Confirmer le mot de passe :</label><input type="password" id="password_confirm_input" name="password_confirm" placeholder="Confirmer le mot de passe" maxlength="30" size="20">
-                        </div>
-                        <div class="buttons_inscription_modal">
-                            <button type="button" class="btn btn-default" name="inscription" id="register_button_modal">S'inscrire</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- Modal du panier -->
         <div class="modal fade" id="cartModal" role="dialog">
             <div class="modal-dialog modal-lg">
@@ -104,6 +74,36 @@
             </div>
         </div>
 
+        <!-- Modal de l'inscription -->
+        <div class="modal fade" id="inscriptionModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content" id="inscription">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title text-center" id="title_inscription_modal">Inscrivez-vous</h2>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="inputs_inscription_modal">
+                            <label for="username">Nom d'utilisateur :</label><input type="text" name="username" id="username_input" placeholder="Nom d'utilisateur" maxlength="30" size="20">
+                        </div>
+                        <div class="inputs_inscription_modal">
+                            <label for="email">Adresse e-mail :</label><input type="email" name="email" id="email_input" placeholder="Mot de passe" maxlength="60" size="20">
+                        </div>
+                        <div class="inputs_inscription_modal">
+                            <label for="password">Mot de passe :</label><input type="password" name="password" id="password_input" placeholder="Mot de passe" maxlength="30" size="20">
+                        </div>
+                        <div class="inputs_inscription_modal">
+                            <label for="password_confirm">Confirmer le mot de passe :</label><input type="password" id="password_confirm_input" name="password_confirm" placeholder="Confirmer le mot de passe" maxlength="30" size="20">
+                        </div>
+                        <div class="buttons_inscription_modal">
+                            <button type="button" class="btn btn-default" name="inscription" id="register_button_modal">S'inscrire</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Navbar -->
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -118,7 +118,7 @@
                 </div>
                 <div class="navbar-collapse collapse" id="navbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">Voir les articles</a></li>
+                        <li><a href="#articles">Voir les articles</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#inscriptionModal"><span class="fa fa-user" aria-hidden="true"></span> S'inscrire</button></li>
@@ -129,5 +129,58 @@
             </div>
         </nav>
 
+
+        <div class="images">
+            <img class="fond hidden-xs" src="assets/img/fond_eCommerce.png" alt=""/>
+        </div>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <button class="btn btn-default" ng-click="showMe = false; hideMe = true" type="submit">Cafetière</button>
+                        <button type="button" ng-click="showMe = true; ; hideMe = false" class="btn btn-default">Dosettes/Capsules</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="container-fluid" id="articles">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div ng-repeat="coffee in coffees| filter:type = 'machine'" ng-show="hideMe" ng-hide="showMe">
+                        <fieldset class="article">
+                            <h2>{{coffee.nom| filter}}</h2>
+                            <img src="assets/img/{{coffee.img}}" alt="">
+                            <h2>Marque: {{coffee.marque}}</h2>
+                            <p>{{coffee.description}}</p>
+                            <p>Prix: {{coffee.prix| currency:"€"}}</p>
+                            <button type="button" name="button">Ajoutez au panier</button>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div ng-repeat="coffee in coffees| filter:type = 'dosette'" ng-hide="hideMe" ng-show="showMe">
+                        <fieldset class="article">
+                            <h2>{{coffee.nom}}</h2>
+                            <img src="assets/img/{{coffee.img}}" alt="">
+                            <h2>Marque: {{coffee.marque}}</h2>
+                            <p>{{coffee.description}}</p>
+                            <p>Prix: {{coffee.prix| currency:"€"}}</p>
+                            <button type="button" name="button">Ajoutez au panier</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid">
+            <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
+                <p >Modes de paiement : </p>
+                <img src="assets/img/visa.png" alt=""/>
+                <img src="assets/img/mastercard.png" alt=""/>
+            </div>
+            <p class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-center footer">© 2017 CoffeeShop Corporation. All Rights Reserved.<br><span class="hidden-xs"> Eric A. Christophe G. Clément B. Priscillia L.</span></p>
+        </footer>
     </body>
 </html>
+

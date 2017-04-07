@@ -35,5 +35,6 @@ coffeeApp.controller('coffeeCtrl', ['$http', '$scope', function ($http, $scope) 
                 .then(function (reponse) {
                     //reponse.data renvoye ce qui est demandé
                     $scope.coffees = reponse.data;
+                    $scope.orderByPrix = "prix";
                 });
     }]);
