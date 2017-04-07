@@ -1,42 +1,42 @@
 [
     {
-        "img": "../img/dolcegusto.jpg",
+        "img": "dolcegusto.jpg",
         "marque": "Nescafe",
-        "reference": "Krups",
+        "reference": "m001",
         "type": "machine",
         "nom": "Dolce Gusto",
         "description": "système haute pression (jusqu’à 15 bars) associé aux capsules brevetées Nescafé",
         "prix": 129.99
     },
     {
-        "img": "../img/nespresso.jpg",
+        "img": "nespresso.jpg",
         "marque": "Nespresso",
-        "reference": "123",
+        "reference": "m002",
         "type": "machine",
         "nom": "KitchenAid",
         "description": "Dimensions (LxHxl): 19.5 x 31.2 x 32.8 cm Capacité du bac pour capsules usagées: 14 Poids: 8.9 k Hauteur: 32.8 Centimeter Capacité du réservoir d'eau: 1.4 litres",
         "prix": 399.99
     },
     {
-        "img": "../img/tassimocaf.jpg",
+        "img": "tassimocaf.jpg",
         "marque": "Braun",
-        "reference": "TA 1100",
+        "reference": "m003",
         "type": "machine",
         "nom": "Tassimo",
         "description": "La machine à café révolutionnaire ! Un système intelligent : une innovation technologique unique et brevetée et un couple machine T-DISC lié par un code-barre. Le T-DISC a été conçu spécifiquement pour chaque boisson. Il préserve ainsi parfaitement les arômes. La machine lit les code-barres et reconnaît la boisson",
         "prix": 80.00
     },
     {
-        "img": "../img/senseo.jpg",
+        "img": "senseo.jpg",
         "marque": "Philips",
-        "reference": "HD7817",
+        "reference": "m004",
         "type": "machine",
         "nom": "Senseo",
         "description": "Profitez d'une pause café encore plus agréable avec la SENSEO Original, la plus vendue des machines SENSEO. Fiable et pratique, elle offre une qualité de café encore meilleure, avec un volume ajustable.Cette machine à café SENSEO vous permet d'arrêter manuellement la préparation du café en plein cycle lorsque vous le souhaitez.",
         "prix": 58.99
     },
     {
-        "img": "../img/dosette_nespresso.jpg",
+        "img": "dosette_nespresso.jpg",
         "marque": "Nespresso",
         "reference": "d001",
         "type": "capsule",
@@ -45,7 +45,7 @@
         "prix": 3.90
     },
     {
-        "img": "../img/dosette_senseo",
+        "img": "dosette_senseo.jpg",
         "marque": "Senséo",
         "reference": "d002",
         "type": "capsule",
@@ -54,7 +54,7 @@
         "prix": 15.98
     },
     {
-        "img": "../img/dosette_tassimo",
+        "img": "dosette_tassimo.jpg",
         "marque": "Tassimo",
         "reference": "d003",
         "type": "capsule",
@@ -63,7 +63,7 @@
         "prix": 16.54
     },
     {
-        "img": "../img/dosette_dolcegusto.jpg",
+        "img": "dosette_dolcegusto.jpg",
         "marque": "Nescafe",
         "reference": "d004",
         "type": "capsule",
