@@ -11,7 +11,6 @@
   <script src="assets/js/angular.min.js" type="text/javascript"></script>
   <script src="assets/js/script.js" type="text/javascript"></script>
 </head>
-
 <body ng-app="coffeeApp" ng-controller="cartCtrl">
   <!-- Modal de la connexion -->
   <div class="modal fade" id="connexionModal" role="dialog">
@@ -36,7 +35,6 @@
       </div>
     </div>
   </div>
-
   <!-- Modal de l'inscription -->
   <div class="modal fade" id="inscriptionModal" role="dialog">
     <div class="modal-dialog">
@@ -66,7 +64,6 @@
       </div>
     </div>
   </div>
-
   <!-- Modal du panier -->
   <div class="modal fade" id="cartModal" role="dialog">
     <div class="modal-dialog modal-lg">
@@ -77,7 +74,6 @@
         </div>
         <!-- Corps du modal avec les items du panier -->
         <div class="modal-body">
-
           <div class="row">
             <div class="col-lg-2 item_pictures">
               <img src="assets/img/nespresso.jpg" alt="Photo capsule nespresso">
@@ -95,7 +91,6 @@
               <hr>
             </div>
           </div>
-
         </div>
         <div class="modal-footer">
           <p>Total : <span id="price_total"></span>€</p>
@@ -104,7 +99,6 @@
       </div>
     </div>
   </div>
-
   <!-- Navbar -->
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -132,13 +126,27 @@
   <div class="images">
     <img class="fond hidden-xs" src="assets/img/fond_eCommerce.png" alt=""/>
   </div>
+  <section>
+    <div class="row">
+      <div class="btn-group col-md-offset-2 col-md-1">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Prix <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Croissant</a></li>
+          <li><a href="#">Décroissant</a></li>
+        </ul>
+      </div>
+    </div>
+    <button type="button" name="caftier"></button>
+  </section>
   <footer class="container-fluid">
-    <div class="hidden-xs hidden-sm col-md-3 col-lg-3">
-      <p>Modes de paiement : </p>
+    <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
+      <p >Modes de paiement : </p>
       <img src="assets/img/visa.png" alt=""/>
       <img src="assets/img/mastercard.png" alt=""/>
     </div>
-    <p class="col-lg-8 text-center footer">© 2017 CoffeeShop Corporation. All Rights Reserved.<br><span class="hidden-xs"> Eric A. Christophe G. Clément B. Priscillia L.</span></p>
+    <p class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-center footer">© 2017 CoffeeShop Corporation. All Rights Reserved.<br><span class="hidden-xs"> Eric A. Christophe G. Clément B. Priscillia L.</span></p>
   </footer>
 </body>
 </html>

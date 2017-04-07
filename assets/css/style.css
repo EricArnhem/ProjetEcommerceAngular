@@ -64,6 +64,7 @@ body{
 -----------Footer-----------
 ***************************/
 footer{
+<<<<<<< HEAD
   padding-top: 15px;
   height: inherit;
   background-color: #A9A9A9;
@@ -71,6 +72,11 @@ footer{
   bottom: 0;
   right: 0;
   width: 100%;
+=======
+    padding-top: 15px;
+    height: 100px;
+    background-color: #A9A9A9;
+>>>>>>> c986870f88ada7aeac65e724bed97ca3c48e2cf1
 }
 .footer{
     padding-top: 20px
@@ -94,6 +100,19 @@ footer{
 
 @media(max-width: 1200px) {
     .images{
+<<<<<<< HEAD
         background-image: url('../img/grain_cafe_big.jpg');
     }
 }
+=======
+        background-image: url(../img/grain_cafe_big.jpg);
+        background-size: cover;
+    }
+}
+@media screen and (max-width: 990px) {
+    .images{
+        background-image: url(../img/grain_cafe_big.jpg);
+        background-size: cover;
+    }
+}
+>>>>>>> c986870f88ada7aeac65e724bed97ca3c48e2cf1
