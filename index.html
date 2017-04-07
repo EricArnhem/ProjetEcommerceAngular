@@ -128,30 +128,13 @@
   </div>
   <section>
     <div class="row">
-      <div class="btn-group col-md-offset-4 col-md-1">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Prix <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Croissant</a></li>
-          <li><a href="#">Décroissant</a></li>
-        </ul>
-      </div>
-      <button class="btn btn-default col-md-1" type="submit">Cafetière</button>
-      <div class="btn-group col-md-1">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dosettes/Capsules <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Dosettes</a></li>
-          <li><a href="#">Capsules</a></li>
-        </ul>
-      </div>
+      <button class="btn btn-default col-md-offset-4 col-md-1" ng-click="showMe=false; hideMe=true" type="submit">Cafetière</button>
+        <button type="button" ng-click="showMe=true;; hideMe=false" class="btn btn-default col-md-offset-1 col-md-2">Dosettes/Capsules</button>
     </div>
   </section>
   <div class="row">
     <div class="col-lg-6">
-      <div ng-repeat="coffee in coffees | filter:type='machine'">
+      <div ng-repeat="coffee in coffees | filter:type='machine'" ng-show="hideMe" ng-hide="showMe">
         <fieldset class="article">
           <h2>{{coffee.nom | filter}}</h2>
           <img src="assets/img/{{coffee.img}}" alt="">
@@ -163,7 +146,7 @@
       </div>
     </div>
     <div class="col-lg-6">
-      <div ng-repeat="coffee in coffees | filter:type='dosette'">
+      <div ng-repeat="coffee in coffees | filter:type='dosette'" ng-hide="hideMe" ng-show="showMe">
         <fieldset class="article">
           <h2>{{coffee.nom}}</h2>
           <img src="assets/img/{{coffee.img}}" alt="">
