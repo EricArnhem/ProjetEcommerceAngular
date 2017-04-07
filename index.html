@@ -11,7 +11,7 @@
         <script src="assets/js/angular.min.js" type="text/javascript"></script>
         <script src="assets/js/script.js" type="text/javascript"></script>
     </head>
-    <body ng-app>
+    <body ng-app="coffeeApp" ng-controller="cartCtrl">
         <!-- Modal de la connexion -->
         <div class="modal fade" id="connexionModal" role="dialog">
             <div class="modal-dialog">
@@ -76,6 +76,7 @@
                     </div>
                     <!-- Corps du modal avec les items du panier -->
                     <div class="modal-body">
+                        
                         <div class="row">
                             <div class="col-lg-2 item_pictures">
                                 <img src="assets/img/nespresso.jpg" alt="Photo capsule nespresso">
@@ -85,14 +86,15 @@
                                 <p>Capsule haut de gamme de mauvaise qualité</p>
                                 <p>Prix : <span class="item_price">100</span>€</p>
                             </div>
-                            <div class="col-lg-3 item_quantity" ng-init="count = 0">
-                                <label for="quantity">Quantité:</label><button type="button" class="quantity_minus" name="button" ng-click="count = count - 1">-</button><span class="quantity_choice">{{count}}</span><button type="button" class="quantity_plus" name="button" ng-click="count = count +1">+</button>
+                            <div class="col-lg-3 item_quantity">
+                                <label>Quantité:</label><button type="button" name="button" ng-click="countMinus()">-</button><span class="quantity_choice">{{count}}</span><button type="button" name="button" ng-click="countPlus()">+</button>
                                 <button type="button" name="remove" class="btn btn-danger item_remove_button">Supprimer</button>
                             </div>
                             <div class="col-lg-12">
                                 <hr>
                             </div>
                         </div>
+                        
                     </div>
                     <div class="modal-footer">
                         <p>Total : <span id="price_total"></span>€</p>
@@ -126,43 +128,16 @@
                 </div>
             </div>
         </nav>
-
-        <div class="images">
-            <div>
-                <img class="grains hidden-xs hidden-sm" src="assets/img/grain_cafe.jpg" alt=""/>
-            </div>
-            <div>
-                <img class="dolce" src="assets/img/dolcegusto.jpg" alt=""/>
-            </div>
-            <div>
-                <img class="nespresso" src="assets/img/nespresso.jpg" alt=""/>
-            </div>
-            <div>
-                <img class="senseo" src="assets/img/senseo.jpg" alt=""/>
-            </div>
-            <div>
-                <img class="tassimo" src="assets/img/tassimocaf.jpg" alt=""/>
-            </div>
-            <div>
-                <img class="dosette_dolce" src="assets/img/dosette_dolcegusto.jpg" alt=""/>
-            </div>
-            <div>
-                <img class="dosette_nespresso" src="assets/img/dosette_nespresso.jpg" alt=""/>
-            </div>
-            <div>
-                <img class="dosette_senseo" src="assets/img/dosette_senseo.jpg" alt=""/>
-            </div>
-            <div>
-                <img class="dosette_tassimo" src="assets/img/dosette_tassimo.jpg" alt=""/>
-            </div>
-        </div>
+        
+        <!-- Contenu -->
         <footer class="container-fluid">
-            <div class="col-lg-3">
-            <p >Modes de paiement </p>
-                <img src="assets/img/visa.png" alt=""/>
-                <img src="assets/img/mastercard.png" alt=""/>
+            <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
+            <p>Modes de paiement :</p>
+                <img src="assets/img/visa.png" alt="logo visa"/>
+                <img src="assets/img/mastercard.png" alt="logo visa"/>
            </div>
-            <p class="col-lg-5 footer"><img src="assets/img/copyright.png" alt=""/> Copyright (c) 2017 by CoffeeShop Corporation. All Rights Reserved.</p>
-            <span class="col-lg-offset-1 col-lg-3 footer">Eric A. Christophe G. Clément B. Priscillia L.</span>
+            <p class="col-xs-12 col-sm-12 col-md-8 col-lg-8 footer text-center">© 2017 CoffeeShop Corporation. All Rights Reserved. <br> <span class="hidden-xs">Eric A. Christophe G. Clément B. Priscillia L.</span></p>
+            
         </footer>
+    </body>
 </html>

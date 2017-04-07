@@ -53,6 +53,7 @@ a{
   margin-right: 5px;
 }
 
+/* Contenu */
 body{
     background-color: #DCDCDC;
 }
@@ -104,8 +105,9 @@ footer{
 .footer{
     padding-top: 20px
 }
-@media screen and (max-width: 1200px) {
+
+@media(max-width: 1200px) {
     .images{
-        background-image: url('assets/img/grain_cafe.jpg');
+        background-image: url('../img/grain_cafe_big.jpg');
     }
 }
