@@ -47,14 +47,14 @@
                     <!-- Corps du modal avec les items du panier -->
                     <div class="modal-body" ng-controller="cartCtrl">
 
-                        <div class="row" ng-repeat="coffee in coffees">
+                        <div class="row" ng-repeat="cartItem in cartItems">
                             <div class="col-lg-2 item_pictures">
-                                <img ng-src="assets/img/{{coffee.img}}" alt="Photo de l'article">
+                                <img ng-src="assets/img/{{cartItem.img}}" alt="Photo de l'article">
                             </div>
                             <div class="col-lg-6 item_description">
-                                <p class="cart_item_title">{{coffee.nom}}</p>
-                                <p>{{coffee.description}}</p>
-                                <p>Prix : <span class="item_price">{{coffee.prix| currency: '€'}}</span></p>
+                                <p class="cart_item_title">{{cartItem.nom}}</p>
+                                <p>{{cartItem.description}}</p>
+                                <p>Prix : <span class="item_price">{{cartItem.prix| currency: '€'}}</span></p>
                             </div>
                             <div class="col-lg-3">
                                 <label>Quantité:</label><button type="button" name="button" ng-click="quantityMinus()">-</button><span class="quantity_choice">{{quantity}}</span><button type="button" name="button" ng-click="quantityPlus()">+</button>
@@ -153,7 +153,7 @@
                             <h2>Marque: {{coffee.marque}}</h2>
                             <p>{{coffee.description}}</p>
                             <p>Prix: {{coffee.prix| currency:"€"}}</p>
-                            <button type="button" name="button">Ajoutez au panier</button>
+                            <button ng-click="addItem()">Ajoutez au panier</button>
                         </fieldset>
                     </div>
                 </div>
@@ -165,7 +165,7 @@
                             <h2>Marque: {{coffee.marque}}</h2>
                             <p>{{coffee.description}}</p>
                             <p>Prix: {{coffee.prix| currency:"€"}}</p>
-                            <button type="button" name="button">Ajoutez au panier</button>
+                            <button ng-click="addItem()">Ajoutez au panier</button>
                         </fieldset>
                     </div>
                 </div>

@@ -22,7 +22,7 @@ coffeeApp.controller('cartCtrl', function ($scope) {
     
         // Fonction qui supprime l'item du panier au clic sur le bouton Supprimer
         $scope.remove = function ($index) {
-            $scope.coffees.splice($index, 1);
+            $scope.cartItems.splice($index, 1);
         };
 
 });
@@ -30,11 +30,22 @@ coffeeApp.controller('cartCtrl', function ($scope) {
 
 // Ici il faut['$http', '$scope', avant la fonction sinon ça ne marche pas
 coffeeApp.controller('coffeeCtrl', ['$http', '$scope', function ($http, $scope) {
-        //$http.get appel le fichier .json
+        //$http.get appel les fichiers json
         $http.get('assets/js/coffee.json')
                 .then(function (reponse) {
-                    //reponse.data renvoye ce qui est demandé
+                    // reponse.data renvoie ce qui est demandé
                     $scope.coffees = reponse.data;
                     $scope.orderByPrix = "prix";
                 });
+                
+        $http.get('assets/js/cart.json')
+                .then(function (reponse) {
+                    // reponse.data renvoie ce qui est demandé
+                    $scope.cartItems = reponse.data;
+                });
+                
+        // Fonction pour ajouter un item
+        $scope.addItem = function () {
+            $scope.cartItems.push({"img": "dolcegusto.jpg", "marque": "Nescafe", "reference": "m001", "type": "machine", "nom": "Dolce Gusto", "description": "Système haute pression (jusqu’à 15 bars) associé aux capsules brevetées Nescafé", "prix": 129.99});
+        };
     }]);
