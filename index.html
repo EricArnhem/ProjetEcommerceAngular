@@ -78,93 +78,77 @@
             <div class="col-lg-2 item_pictures">
               <img src="assets/img/nespresso.jpg" alt="Photo capsule nespresso">
             </div>
-            <div class="col-lg-6 item_description">
-              <p class="cart_item_title">Capsule Nespresso</p>
-              <p>Capsule haut de gamme de mauvaise qualité</p>
-              <p>Prix : <span class="item_price">100</span>€</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">CoffeeShop</a>
             </div>
-            <div class="col-lg-3 item_quantity">
-              <label>Quantité:</label><button type="button" name="button" ng-click="countMinus()">-</button><span class="quantity_choice">{{count}}</span><button type="button" name="button" ng-click="countPlus()">+</button>
-              <button type="button" name="remove" class="btn btn-danger item_remove_button">Supprimer</button>
+            <div class="navbar-collapse collapse" id="navbar">
+              <ul class="nav navbar-nav">
+                <li><a href="#">Voir les articles</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li><button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#inscriptionModal"><span class="fa fa-user" aria-hidden="true"></span> S'inscrire</button></li>
+                <li><button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#connexionModal"><span class="fa fa-sign-in" aria-hidden="true"></span> Connexion</button></li>
+                <li><button class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#cartModal"><span class="fa fa-shopping-cart" aria-hidden="true"></span> Panier</button></li>
+              </ul>
             </div>
-            <div class="col-lg-12">
-              <hr>
+          </div>
+        </nav>
+        <div class="images">
+          <img class="fond hidden-xs" src="assets/img/fond_eCommerce.png" alt=""/>
+        </div>
+        <section>
+          <div class="row">
+            <button class="btn btn-default col-md-offset-4 col-md-1" type="submit">Cafetière</button>
+            <button class="btn btn-default col-md-offset-1 col-md-2" type="submit">Dosettes / Capsules</button>
+          </div>
+        </section>
+        <div class="row">
+          <div class="col-lg-offset-1 col-lg-5">
+            <div ng-repeat="coffee in coffees | filter:type='machine'">
+              <fieldset class="article">
+                <h2>{{coffee.nom}}</h2>
+                <img src="assets/img/{{coffee.img}}" alt="">
+                <h2>Marque: {{coffee.marque}}</h2>
+                <p>{{coffee.description}}</p>
+                <p>Prix: {{coffee.prix | currency: "€"}}</p>
+                <button type="button" name="button">Ajoutez au panier</button>
+              </fieldset>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div ng-repeat="coffee in coffees | filter:type='dosette'">
+              <fieldset class="article">
+                <h2>{{coffee.nom}}</h2>
+                <img src="assets/img/{{coffee.img}}" alt="">
+                <h2>Marque: {{coffee.marque}}</h2>
+                <p>{{coffee.description}}</p>
+                <p>Prix: {{coffee.prix | currency: "€"}}</p>
+                <button type="button" name="button">Ajoutez au panier</button>
+              </fieldset>
             </div>
           </div>
         </div>
-        <div class="modal-footer">
-          <p>Total : <span id="price_total"></span>€</p>
-          <button type="button" class="btn btn-success" id="confirm_order">Passer la commande</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Navbar -->
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">CoffeeShop</a>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar">
-        <ul class="nav navbar-nav">
-          <li><a href="#">Voir les articles</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><button class="btn btn-success navbar-btn" data-toggle="modal" data-target="#inscriptionModal"><span class="fa fa-user" aria-hidden="true"></span> S'inscrire</button></li>
-          <li><button class="btn btn-primary navbar-btn" data-toggle="modal" data-target="#connexionModal"><span class="fa fa-sign-in" aria-hidden="true"></span> Connexion</button></li>
-          <li><button class="btn btn-danger navbar-btn" data-toggle="modal" data-target="#cartModal"><span class="fa fa-shopping-cart" aria-hidden="true"></span> Panier</button></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="images">
-    <img class="fond hidden-xs" src="assets/img/fond_eCommerce.png" alt=""/>
-  </div>
-  <section>
-    <div class="row">
-      <button class="btn btn-default col-md-offset-4 col-md-1" type="submit">Cafetière</button>
-      <button class="btn btn-default col-md-offset-1 col-md-2" type="submit">Dosettes / Capsules</button>
-    </div>
-  </section>
-  <div class="row">
-    <div class="col-lg-offset-1 col-lg-5">
-      <div ng-repeat="coffee in coffees | filter:type='machine'">
-        <fieldset class="article">
-          <h2>{{coffee.nom}}</h2>
-          <img src="assets/img/{{coffee.img}}" alt="">
-          <h2>Marque: {{coffee.marque}}</h2>
-          <p>{{coffee.description}}</p>
-          <p>Prix: {{coffee.prix | currency: "€"}}</p>
-          <button type="button" name="button">Ajoutez au panier</button>
-        </fieldset>
-      </div>
-    </div>
-    <div class="col-lg-5">
-      <div ng-repeat="coffee in coffees | filter:type='dosette'">
-        <fieldset class="article">
-          <h2>{{coffee.nom}}</h2>
-          <img src="assets/img/{{coffee.img}}" alt="">
-          <h2>Marque: {{coffee.marque}}</h2>
-          <p>{{coffee.description}}</p>
-          <p>Prix: {{coffee.prix | currency: "€"}}</p>
-          <button type="button" name="button">Ajoutez au panier</button>
-        </fieldset>
-      </div>
-    </div>
-  </div>
-  <footer class="container-fluid">
-    <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
-      <p >Modes de paiement : </p>
-      <img src="assets/img/visa.png" alt=""/>
-      <img src="assets/img/mastercard.png" alt=""/>
-    </div>
-    <p class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-center footer">© 2017 CoffeeShop Corporation. All Rights Reserved.<br><span class="hidden-xs"> Eric A. Christophe G. Clément B. Priscillia L.</span></p>
-  </footer>
-</body>
-</html>
+        <footer class="container-fluid">
+          <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
+            <p >Modes de paiement : </p>
+            <img src="assets/img/visa.png" alt=""/>
+            <img src="assets/img/mastercard.png" alt=""/>
+          </div>
+          <p class="col-xs-12 col-sm-12 col-md-8 col-lg-8 text-center footer">© 2017 CoffeeShop Corporation. All Rights Reserved.<br><span class="hidden-xs"> Eric A. Christophe G. Clément B. Priscillia L.</span></p>
+        </footer>
+      </body>
+      </html>

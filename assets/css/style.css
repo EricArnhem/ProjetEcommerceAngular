@@ -1,56 +1,53 @@
-/***************************
---------Images lg md--------
-***************************/
 /* --- Navbar --- */
 a{
     outline-style: none;
 }
-
 .navbar-btn{
     margin-right: 5px;
 }
-
 .navbar li{
     text-align: center;
 }
-
 .navbar{
     border-radius: 0;
 }
-
 /* Modals */
-.inputs_inscription_modal label, buttons_connexion_modal label{
+.close{
+    color: white;
+    opacity: 0.8;
+}
+
+.close:hover{
+    color: white;
+    opacity: 0.5;
+}
+
+.inputs_inscription_modal label, .inputs_connexion_modal label{
     width: 200px;
     text-align: right;
     margin-right: 5px;
     margin-bottom: 10px;
 }
-
 .modal-header{
-    background-image: url('../img/grain_cafe.jpg');
+    background-image: url('../img/grain_cafe_big.jpg');
     font-size: 25px;
     color: white;
 }
-
 /* Modal Panier */
 .item_remove_button{
     margin-top: 40px;
 }
-
 .item_pictures img{
   height: 75px;
 }
-
 .cart_item_title{
   font-weight: bold;
 }
-
 #cart_button{
   margin-top: 20px;
   margin-right: 10px;
   float: right;
 }
-
 .quantity_choice{
   margin-left: 5px;
   margin-right: 5px;
@@ -59,6 +56,9 @@ a{
 .article {
   border: 1px solid black;
   text-align: center;
+/*bouton_prix*/
+.bouton_prix{
+  z-index: 2000;
 }
 /* Contenu */
 body{
@@ -68,7 +68,6 @@ body{
 -----------Footer-----------
 ***************************/
 footer{
-
   padding-top: 15px;
   height: inherit;
   background-color: #A9A9A9;
@@ -76,6 +75,13 @@ footer{
   padding-top: 15px;
   height: 100px;
   background-color: #A9A9A9;
+  padding-top: 15px;
+  height: inherit;
+  background-color: #A9A9A9;
+  /*position: fixed;*/
+  bottom: 0;
+  right: 0;
+  width: 100%;
 }
 .footer{
     padding-top: 20px

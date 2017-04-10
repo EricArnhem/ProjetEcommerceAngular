@@ -14,7 +14,7 @@
        "reference": "m002",
        "type": "machine",
        "nom": "KitchenAid",
-       "description": "Dimensions (LxHxl): 19.5 x 31.2 x 32.8 cm Capacité du bac pour capsules usagées: 14 Poids: 8.9 k Hauteur: 32.8 Centimeter Capacité du réservoir d'eau: 1.4 litres",
+       "description": "Dimensions: L19.5 x H31.2 x l32.8 cm Capacité du bac pour capsules usagées: 14 Poids: 8.9 k Hauteur: 32.8 Centimeter Capacité du réservoir d'eau: 1.4 litres",
        "prix": 399.99
    },
    {
@@ -46,11 +46,11 @@
    },
    {
        "img": "dosette_senseo.jpg",
-       "marque": "Senséo",
+       "marque": "Senseo",
        "reference": "d002",
        "type": "dosette",
        "nom": "Royal Lungo",
-       "description": "x36 Dosettes Souples compatibles Systeme Senséo",
+       "description": "x36 Dosettes Souples compatibles Systeme Senseo",
        "prix": 15.98
    },
    {
