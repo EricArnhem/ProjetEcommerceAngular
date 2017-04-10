@@ -68,7 +68,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        <p>Total : <span id="price_total">{{total}}</span>€</p>
+                        <p>Total : <span ng-bind="totalPrice() | currency:'€'"></span></p>
                         <button type="button" class="btn btn-success" id="confirm_order">Passer la commande</button>
                     </div>
                 </div>
@@ -137,9 +137,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <button type="button" ng-click="showMachine = true; showCapsule = false; showAll = false;" class="btn btn-default">Cafetière</button>
-                    <button type="button" ng-click="showMachine = false; showCapsule = true; showAll = false;" class="btn btn-default">Dosettes/Capsules</button>
-                    <button type="button" ng-click="showAll = true;" class="btn btn-default">Tout les articles</button>
+                    <button type="button" ng-click="showMachine = true; showCapsule = false;" class="btn btn-danger">Cafetière</button>
+                    <button type="button" ng-click="showMachine = false; showCapsule = true;" class="btn btn-success">Dosettes/Capsules</button>
+                    <button type="button" ng-click="showMachine = false; showCapsule = false;" class="btn btn-warning">Tout les articles</button>
                 </div>
             </div>
         </div>
@@ -147,26 +147,28 @@
         <div class="container-fluid" id="articles">
             <div class="row">
                 <div class="col-lg-6">
-                    <div ng-repeat="coffee in coffees | filter:type = 'machine'" ng-show="showAll" ng-hide="showCapsule">
+                    <div class="text-center" ng-repeat="coffee in coffees | filter:type = 'machine'" ng-hide="showCapsule">
                         <fieldset class="article">
-                            <h2>{{coffee.nom}}</h2>
+                            <h2 class="item_title">{{coffee.nom}}</h2>
                             <img src="assets/img/{{coffee.img}}" alt="">
-                            <h2>Marque: {{coffee.marque}}</h2>
+                            <h3>Marque: <span class="bold_text">{{coffee.marque}}</span></h3>
                             <p>{{coffee.description}}</p>
-                            <p>Prix: {{coffee.prix | currency:"€"}}</p>
-                            <button ng-click="addItem()">Ajoutez au panier</button>
+                            <p class="bold_text">Prix: {{coffee.prix | currency:"€"}}</p>
+                            <button class="btn btn-primary" ng-click="addItem()">Ajouter au panier</button>
+                            <hr>
                         </fieldset>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div ng-repeat="coffee in coffees | filter:type = 'dosette'" ng-show="showAll" ng-hide="showMachine">
+                    <div class="text-center" ng-repeat="coffee in coffees | filter:type = 'dosette'" ng-hide="showMachine">
                         <fieldset class="article">
-                            <h2>{{coffee.nom}}</h2>
+                            <h2 class="item_title">{{coffee.nom}}</h2>
                             <img src="assets/img/{{coffee.img}}" alt="">
-                            <h2>Marque: {{coffee.marque}}</h2>
+                            <h3>Marque: <span class="bold_text">{{coffee.marque}}</span></h3>
                             <p>{{coffee.description}}</p>
-                            <p>Prix: {{coffee.prix | currency:"€"}}</p>
-                            <button ng-click="addItem()">Ajoutez au panier</button>
+                            <p class="bold_text">Prix: {{coffee.prix | currency:"€"}}</p>
+                            <button class="btn btn-primary" ng-click="addItem()">Ajouter au panier</button>
+                            <hr>
                         </fieldset>
                     </div>
                 </div>
@@ -175,7 +177,7 @@
 
         <footer class="container-fluid">
             <div class="hidden-xs hidden-sm col-md-2 col-lg-2">
-                <p >Modes de paiement : </p>
+                <p>Modes de paiement : </p>
                 <img src="assets/img/visa.png" alt=""/>
                 <img src="assets/img/mastercard.png" alt=""/>
             </div>

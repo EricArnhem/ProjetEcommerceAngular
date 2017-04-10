@@ -1,6 +1,6 @@
 [
    {
-       "img": "dolcegusto.jpg",
+       "img": "dolcegusto.png",
        "marque": "Nescafe",
        "reference": "m001",
        "type": "machine",
@@ -10,7 +10,7 @@
        "quantity": 1
    },
    {
-       "img": "nespresso.jpg",
+       "img": "nespresso.png",
        "marque": "Nespresso",
        "reference": "m002",
        "type": "machine",
@@ -20,7 +20,7 @@
        "quantity": 1
    },
    {
-       "img": "tassimocaf.jpg",
+       "img": "tassimocaf.png",
        "marque": "Braun",
        "reference": "m003",
        "type": "machine",
@@ -30,7 +30,7 @@
        "quantity": 1
    },
    {
-       "img": "senseo.jpg",
+       "img": "senseo.png",
        "marque": "Philips",
        "reference": "m004",
        "type": "machine",
@@ -40,7 +40,7 @@
        "quantity": 1
    },
    {
-       "img": "dosette_nespresso.jpg",
+       "img": "dosette_nespresso.png",
        "marque": "Nespresso",
        "reference": "d001",
        "type": "dosette",
@@ -50,7 +50,7 @@
        "quantity": 1
    },
    {
-       "img": "dosette_senseo.jpg",
+       "img": "dosette_senseo.png",
        "marque": "Senseo",
        "reference": "d002",
        "type": "dosette",
@@ -60,7 +60,7 @@
        "quantity": 1
    },
    {
-       "img": "dosette_tassimo.jpg",
+       "img": "dosette_tassimo.png",
        "marque": "Tassimo",
        "reference": "d003",
        "type": "dosette",
@@ -70,7 +70,7 @@
        "quantity": 1
    },
    {
-       "img": "dosette_dolcegusto.jpg",
+       "img": "dosette_dolcegusto.png",
        "marque": "Nescafe",
        "reference": "d004",
        "type": "dosette",
