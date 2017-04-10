@@ -54,10 +54,11 @@
                             <div class="col-lg-6 item_description">
                                 <p class="cart_item_title">{{cartItem.nom}}</p>
                                 <p>{{cartItem.description}}</p>
-                                <p>Prix : <span class="item_price">{{cartItem.prix| currency: '€'}}</span></p>
+                                <p>Prix unitaire : <span class="item_price">{{cartItem.prix | currency: '€'}}</span></p>
+                                <p>Prix total : <span class="item_price">{{cartItem.prix * cartItem.quantity | currency: '€'}}</span></p>
                             </div>
                             <div class="col-lg-3">
-                                <label>Quantité:</label><button type="button" name="button" ng-click="quantityMinus()">-</button><span class="quantity_choice">{{quantity}}</span><button type="button" name="button" ng-click="quantityPlus()">+</button>
+                                <label>Quantité:</label><button type="button" name="button" ng-click="quantityMinus(cartItem); totalPrice()">-</button><span class="quantity_choice">{{cartItem.quantity}}</span><button type="button" name="button" ng-click="quantityPlus(cartItem); totalPrice()">+</button>
                                 <button type="button" name="remove" class="btn btn-danger item_remove_button" ng-click="remove($index)">Supprimer</button>
                             </div>
                             <div class="col-lg-12">
@@ -67,7 +68,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        <p>Total : <span id="price_total"></span>€</p>
+                        <p>Total : <span id="price_total">{{total}}</span>€</p>
                         <button type="button" class="btn btn-success" id="confirm_order">Passer la commande</button>
                     </div>
                 </div>
@@ -148,11 +149,11 @@
                 <div class="col-lg-6">
                     <div ng-repeat="coffee in coffees | filter:type = 'machine'" ng-show="showAll" ng-hide="showCapsule">
                         <fieldset class="article">
-                            <h2>{{coffee.nom| filter}}</h2>
+                            <h2>{{coffee.nom}}</h2>
                             <img src="assets/img/{{coffee.img}}" alt="">
                             <h2>Marque: {{coffee.marque}}</h2>
                             <p>{{coffee.description}}</p>
-                            <p>Prix: {{coffee.prix| currency:"€"}}</p>
+                            <p>Prix: {{coffee.prix | currency:"€"}}</p>
                             <button ng-click="addItem()">Ajoutez au panier</button>
                         </fieldset>
                     </div>
@@ -164,7 +165,7 @@
                             <img src="assets/img/{{coffee.img}}" alt="">
                             <h2>Marque: {{coffee.marque}}</h2>
                             <p>{{coffee.description}}</p>
-                            <p>Prix: {{coffee.prix| currency:"€"}}</p>
+                            <p>Prix: {{coffee.prix | currency:"€"}}</p>
                             <button ng-click="addItem()">Ajoutez au panier</button>
                         </fieldset>
                     </div>

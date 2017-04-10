@@ -6,7 +6,8 @@
        "type": "machine",
        "nom": "Dolce Gusto",
        "description": "Système haute pression (jusqu’à 15 bars) associé aux capsules brevetées Nescafé",
-       "prix": 129.99
+       "prix": 129.99,
+       "quantity": 1
    },
    {
        "img": "nespresso.jpg",
@@ -15,7 +16,8 @@
        "type": "machine",
        "nom": "KitchenAid",
        "description": "Dimensions: L19.5 x H31.2 x l32.8 cm Capacité du bac pour capsules usagées: 14 Poids: 8.9 k Hauteur: 32.8 Centimeter Capacité du réservoir d'eau: 1.4 litres",
-       "prix": 399.99
+       "prix": 399.99,
+       "quantity": 1
    },
    {
        "img": "tassimocaf.jpg",
@@ -24,7 +26,8 @@
        "type": "machine",
        "nom": "Tassimo",
        "description": "La machine à café révolutionnaire ! Un système intelligent : une innovation technologique unique et brevetée et un couple machine T-DISC lié par un code-barre. Le T-DISC a été conçu spécifiquement pour chaque boisson. Il préserve ainsi parfaitement les arômes. La machine lit les code-barres et reconnaît la boisson",
-       "prix": 80.00
+       "prix": 80.00,
+       "quantity": 1
    },
    {
        "img": "senseo.jpg",
@@ -33,7 +36,8 @@
        "type": "machine",
        "nom": "Senseo",
        "description": "Profitez d'une pause café encore plus agréable avec la SENSEO Original, la plus vendue des machines SENSEO. Fiable et pratique, elle offre une qualité de café encore meilleure, avec un volume ajustable.Cette machine à café SENSEO vous permet d'arrêter manuellement la préparation du café en plein cycle lorsque vous le souhaitez.",
-       "prix": 58.99
+       "prix": 58.99,
+       "quantity": 1
    },
    {
        "img": "dosette_nespresso.jpg",
@@ -42,7 +46,8 @@
        "type": "dosette",
        "nom": "Kazaar",
        "description": "Mélange audacieux de Robustas du Brésil et du Guatemala spécialement préparés pour Nespresso et d’un Arabica d’Amérique du Sud, torréfiés séparément, Kazaar est un café d’une exceptionnelle intensité. Sa puissante amertume et ses notes poivrées sont équilibrées par une texture dense et crémeuse.",
-       "prix": 3.90
+       "prix": 3.90,
+       "quantity": 1
    },
    {
        "img": "dosette_senseo.jpg",
@@ -51,7 +56,8 @@
        "type": "dosette",
        "nom": "Royal Lungo",
        "description": "x36 Dosettes Souples compatibles Systeme Senseo",
-       "prix": 15.98
+       "prix": 15.98,
+       "quantity": 1
    },
    {
        "img": "dosette_tassimo.jpg",
@@ -60,7 +66,8 @@
        "type": "dosette",
        "nom": "Voluptuoso",
        "description": "Fin et velouté, Carte Noire Voluptuoso est le café idéal pour profiter d'un agréable moment, seul ou entre amis. Avec Carte Noire Voluptuoso, retrouvez l'arôme unique et profond de Carte Noire accompagné d'une mousse onctueuse",
-       "prix": 16.54
+       "prix": 16.54,
+       "quantity": 1
    },
    {
        "img": "dosette_dolcegusto.jpg",
@@ -69,6 +76,7 @@
        "type": "dosette",
        "nom": "Espresso Magnum",
        "description": "Découvrez l'Espresso Magnum. Un café doux et équilibré à la crèma veloutée, préparé avec soin à partir de grains d’arabica puis finement torréfiés et moulus.",
-       "prix": 8.19
+       "prix": 8.19,
+       "quantity": 1
    }
 ]
