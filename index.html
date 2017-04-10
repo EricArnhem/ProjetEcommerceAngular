@@ -21,16 +21,18 @@
                         <h2 class="modal-title text-center" id="title_connexion_modal">Connectez-vous</h2>
                     </div>
                     <div class="modal-body text-center">
-                        <div class="inputs_connexion_modal">
-                            <label for="username">Nom d'utilisateur :</label><input type="text" name="username" placeholder="Nom d'utilisateur" maxlength="30" size="15">
-                        </div>
-                        <div class="inputs_connexion_modal">
-                            <label for="password">Mot de passe :</label><input type="password" name="password" placeholder="Mot de passe" maxlength="60" size="15">
-                        </div>
-                        <div class="buttons_connexion_modal">
-                            <button type="button" class="btn btn-default" name="connexion">Connexion</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                        </div>
+                        <form>
+                            <div class="inputs_connexion_modal">
+                                <label for="username">Nom d'utilisateur :</label><input type="text" name="username" placeholder="Nom d'utilisateur" maxlength="30" size="15">
+                            </div>
+                            <div class="inputs_connexion_modal">
+                                <label for="password">Mot de passe :</label><input type="password" name="password" placeholder="Mot de passe" maxlength="60" size="15">
+                            </div>
+                            <div class="buttons_connexion_modal">
+                                <button type="button" class="btn btn-default" name="connexion">Connexion</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -46,7 +48,6 @@
                     </div>
                     <!-- Corps du modal avec les items du panier -->
                     <div class="modal-body" ng-controller="cartCtrl">
-
                         <div class="row" ng-repeat="cartItem in cartItems">
                             <div class="col-lg-2 item_pictures">
                                 <img ng-src="assets/img/{{cartItem.img}}" alt="Photo de l'article">
@@ -54,8 +55,8 @@
                             <div class="col-lg-6 item_description">
                                 <p class="cart_item_title">{{cartItem.nom}}</p>
                                 <p>{{cartItem.description}}</p>
-                                <p>Prix unitaire : <span class="item_price">{{cartItem.prix | currency: '€'}}</span></p>
-                                <p>Prix total : <span class="item_price">{{cartItem.prix * cartItem.quantity | currency: '€'}}</span></p>
+                                <p>Prix unitaire : <span class="item_price">{{cartItem.prix| currency: '€'}}</span></p>
+                                <p>Prix total : <span class="item_price">{{cartItem.prix * cartItem.quantity| currency: '€'}}</span></p>
                             </div>
                             <div class="col-lg-3">
                                 <label>Quantité:</label><button type="button" name="button" ng-click="quantityMinus(cartItem); totalPrice()">-</button><span class="quantity_choice">{{cartItem.quantity}}</span><button type="button" name="button" ng-click="quantityPlus(cartItem); totalPrice()">+</button>
@@ -65,7 +66,6 @@
                                 <hr>
                             </div>
                         </div>
-
                     </div>
                     <div class="modal-footer">
                         <p>Total : <span ng-bind="totalPrice() | currency:'€'"></span></p>
@@ -84,22 +84,24 @@
                         <h2 class="modal-title text-center" id="title_inscription_modal">Inscrivez-vous</h2>
                     </div>
                     <div class="modal-body text-center">
-                        <div class="inputs_inscription_modal">
-                            <label for="username">Nom d'utilisateur :</label><input type="text" name="username" id="username_input" placeholder="Nom d'utilisateur" maxlength="30" size="20">
-                        </div>
-                        <div class="inputs_inscription_modal">
-                            <label for="email">Adresse e-mail :</label><input type="email" name="email" id="email_input" placeholder="Mot de passe" maxlength="60" size="20">
-                        </div>
-                        <div class="inputs_inscription_modal">
-                            <label for="password">Mot de passe :</label><input type="password" name="password" id="password_input" placeholder="Mot de passe" maxlength="30" size="20">
-                        </div>
-                        <div class="inputs_inscription_modal">
-                            <label for="password_confirm">Confirmer le mot de passe :</label><input type="password" id="password_confirm_input" name="password_confirm" placeholder="Confirmer le mot de passe" maxlength="30" size="20">
-                        </div>
-                        <div class="buttons_inscription_modal">
-                            <button type="button" class="btn btn-default" name="inscription" id="register_button_modal">S'inscrire</button>
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
-                        </div>
+                        <form>
+                            <div class="inputs_inscription_modal">
+                                <label for="username">Nom d'utilisateur :</label><input type="text" name="username" id="username_input" placeholder="Nom d'utilisateur" maxlength="30" size="20">
+                            </div>
+                            <div class="inputs_inscription_modal">
+                                <label for="email">Adresse e-mail :</label><input type="email" name="email" id="email_input" placeholder="Mot de passe" maxlength="60" size="20">
+                            </div>
+                            <div class="inputs_inscription_modal">
+                                <label for="password">Mot de passe :</label><input type="password" name="password" id="password_input" placeholder="Mot de passe" maxlength="30" size="20">
+                            </div>
+                            <div class="inputs_inscription_modal">
+                                <label for="password_confirm">Confirmer le mot de passe :</label><input type="password" id="password_confirm_input" name="password_confirm" placeholder="Confirmer le mot de passe" maxlength="30" size="20">
+                            </div>
+                            <div class="buttons_inscription_modal">
+                                <button type="button" class="btn btn-default" name="inscription" id="register_button_modal">S'inscrire</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -131,13 +133,14 @@
         </nav>
 
         <!-- Contenu de la page -->
-        <div class="images">
+        <h1 class="text-center">CoffeeShop</h1>
+        <div class="images text-center">
             <img class="fond hidden-xs" src="assets/img/fond_eCommerce.png" alt="photo grain de café"/>
         </div>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <button type="button" ng-click="showMachine = true; showCapsule = false;" class="btn btn-danger">Cafetière</button>
+                    <button type="button" ng-click="showMachine = true; showCapsule = false;" class="btn btn-danger">Cafetières</button>
                     <button type="button" ng-click="showMachine = false; showCapsule = true;" class="btn btn-success">Dosettes/Capsules</button>
                     <button type="button" ng-click="showMachine = false; showCapsule = false;" class="btn btn-warning">Tout les articles</button>
                 </div>
@@ -147,26 +150,26 @@
         <div class="container-fluid" id="articles">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="text-center" ng-repeat="coffee in coffees | filter:type = 'machine'" ng-hide="showCapsule">
+                    <div class="text-center" ng-repeat="coffee in coffees| filter:type = 'machine'" ng-hide="showCapsule">
                         <fieldset class="article">
                             <h2 class="item_title">{{coffee.nom}}</h2>
                             <img src="assets/img/{{coffee.img}}" alt="">
                             <h3>Marque: <span class="bold_text">{{coffee.marque}}</span></h3>
                             <p>{{coffee.description}}</p>
-                            <p class="bold_text">Prix: {{coffee.prix | currency:"€"}}</p>
+                            <p class="bold_text">Prix: {{coffee.prix| currency:"€"}}</p>
                             <button class="btn btn-primary" ng-click="addItem()">Ajouter au panier</button>
                             <hr>
                         </fieldset>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="text-center" ng-repeat="coffee in coffees | filter:type = 'dosette'" ng-hide="showMachine">
+                    <div class="text-center" ng-repeat="coffee in coffees| filter:type = 'dosette'" ng-hide="showMachine">
                         <fieldset class="article">
                             <h2 class="item_title">{{coffee.nom}}</h2>
                             <img src="assets/img/{{coffee.img}}" alt="">
                             <h3>Marque: <span class="bold_text">{{coffee.marque}}</span></h3>
                             <p>{{coffee.description}}</p>
-                            <p class="bold_text">Prix: {{coffee.prix | currency:"€"}}</p>
+                            <p class="bold_text">Prix: {{coffee.prix| currency:"€"}}</p>
                             <button class="btn btn-primary" ng-click="addItem()">Ajouter au panier</button>
                             <hr>
                         </fieldset>

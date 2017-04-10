@@ -1,4 +1,4 @@
-/* --- Navbar --- */
+/* -- Navbar -- */
 a{
     outline-style: none;
 }
@@ -11,7 +11,7 @@ a{
 .navbar{
     border-radius: 0;
 }
-/* Modals */
+/* -- Modals -- */
 .close{
     color: white;
     opacity: 0.8;
@@ -33,7 +33,7 @@ a{
     font-size: 25px;
     color: white;
 }
-/* Modal Panier */
+/* -- Modal Panier -- */
 .item_remove_button{
     margin-top: 40px;
 }
@@ -52,17 +52,26 @@ a{
   margin-left: 5px;
   margin-right: 5px;
 }
-/*bouton_prix*/
+
 .bouton_prix{
   z-index: 2000;
 }
-/* Contenu */
+/* -- Contenu -- */
 body{
     background-color: #DCDCDC;
 }
-/***************************
------------Footer-----------
-***************************/
+
+/* Articles */
+
+.bold_text{
+    font-weight: bold;
+}
+
+h1{
+    text-decoration: underline;
+}
+
+/* -- Footer -- */
 footer{
   padding-top: 15px;
   height: inherit;
@@ -74,22 +83,4 @@ footer{
 }
 .footer{
     padding-top: 20px
-}
-/***************************
-------------Fond------------
-***************************/
-.fond{
-  margin-top: 0;
-  margin-left: 22.5%;
-}
-
-/* Articles */
-
-.bold_text{
-    font-weight: bold;
-}
-
-.item_title{
-    border: 2px solid blueviolet;
-    border-radius: 10px;
 }
